@@ -1,0 +1,14 @@
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\obj\Debug\Estudo.Comum.Repositorios.Entity.csprojAssemblyReference.cache
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\obj\Debug\Estudo.Comum.Repositorios.Entity.csproj.CoreCompileInputs.cache
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\Estudo.Comum.Repositorios.Entity.dll.config
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\Estudo.Comum.Repositorios.Entity.dll
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\Estudo.Comum.Repositorios.Entity.pdb
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\EntityFramework.dll
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\Estudo.Comum.Repositorios.Interfaces.dll
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\Estudo.Comum.Repositorios.Interfaces.pdb
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\EntityFramework.xml
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\obj\Debug\Estudo.Comum.Repositorios.Entity.csproj.CopyComplete
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\obj\Debug\Estudo.Comum.Repositorios.Entity.dll
+C:\Users\vanderson.pereira\source\repos\Estudo.MinhaApi\Estudo.Comum.Repositorios.Entity\obj\Debug\Estudo.Comum.Repositorios.Entity.pdb
