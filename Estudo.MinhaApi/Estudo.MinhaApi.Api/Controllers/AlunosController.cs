@@ -1,5 +1,7 @@
 ﻿using Estudo.Comum.Repositorios.Interfaces;
 using Estudo.MinhaApi.AcessoADados.Entity.Context;
+using Estudo.MinhaApi.Api.AutoMapper;
+using Estudo.MinhaApi.Api.DTOs;
 using Estudo.MinhaApi.Dominio;
 using Estudo.MinhaApi.Repositorios.Entity;
 using System;
@@ -17,7 +19,11 @@ namespace Estudo.MinhaApi.Api.Controllers
 
         public IHttpActionResult Get()
         {
-            return Ok(_repositorioAlunos.Selecionar());
+            List<Aluno> alunos = _repositorioAlunos.Selecionar();
+            List<AlunoDTO> dtos
+                = AutoMapperManager.Instance.Mapper.Map<List<Aluno>, List<AlunoDTO>>(alunos);
+
+            return Ok(dtos);
         }
 
         public IHttpActionResult Get(int? id)
@@ -30,20 +36,27 @@ namespace Estudo.MinhaApi.Api.Controllers
             if (aluno == null)
                 return NotFound();
 
-            return Content(HttpStatusCode.Found, aluno);
+            AlunoDTO dto = AutoMapperManager.Instance.Mapper.Map<Aluno, AlunoDTO>(aluno);
+            return Content(HttpStatusCode.Found, dto);
         }
 
-        public IHttpActionResult Post([FromBody] Aluno aluno)
+        public IHttpActionResult Post([FromBody] AlunoDTO dto)
         {
-            try
+            if (ModelState.IsValid)
             {
-                _repositorioAlunos.Inserir(aluno);
-                return Created($"{Request.RequestUri}/{aluno.Id}",aluno);
+                try
+                {
+                    Aluno aluno = AutoMapperManager.Instance.Mapper.Map<AlunoDTO, Aluno>(dto);
+                    _repositorioAlunos.Inserir(aluno);
+                    return Created($"{Request.RequestUri}/{aluno.Id}", aluno);
+                }
+                catch (Exception ex)
+                {
+                    return InternalServerError(ex);
+                }
             }
-            catch (Exception ex)
-            {
-                return InternalServerError(ex);
-            }
+            else
+                return BadRequest(ModelState);
         }
 
         public IHttpActionResult Put(int? id, [FromBody] Aluno aluno)
