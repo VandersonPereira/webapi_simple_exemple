@@ -2,6 +2,7 @@
 using Estudo.MinhaApi.AcessoADados.Entity.Context;
 using Estudo.MinhaApi.Api.AutoMapper;
 using Estudo.MinhaApi.Api.DTOs;
+using Estudo.MinhaApi.Api.Filters;
 using Estudo.MinhaApi.Dominio;
 using Estudo.MinhaApi.Repositorios.Entity;
 using System;
@@ -40,32 +41,30 @@ namespace Estudo.MinhaApi.Api.Controllers
             return Content(HttpStatusCode.Found, dto);
         }
 
+        [ApplyModelValidation]
         public IHttpActionResult Post([FromBody] AlunoDTO dto)
         {
-            if (ModelState.IsValid)
+            try
             {
-                try
-                {
-                    Aluno aluno = AutoMapperManager.Instance.Mapper.Map<AlunoDTO, Aluno>(dto);
-                    _repositorioAlunos.Inserir(aluno);
-                    return Created($"{Request.RequestUri}/{aluno.Id}", aluno);
-                }
-                catch (Exception ex)
-                {
-                    return InternalServerError(ex);
-                }
+                Aluno aluno = AutoMapperManager.Instance.Mapper.Map<AlunoDTO, Aluno>(dto);
+                _repositorioAlunos.Inserir(aluno);
+                return Created($"{Request.RequestUri}/{aluno.Id}", aluno);
             }
-            else
-                return BadRequest(ModelState);
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
 
-        public IHttpActionResult Put(int? id, [FromBody] Aluno aluno)
+        [ApplyModelValidation]
+        public IHttpActionResult Put(int? id, [FromBody] AlunoDTO dto)
         {
             try
             {
                 if (!id.HasValue)
                     return BadRequest();
 
+                Aluno aluno = AutoMapperManager.Instance.Mapper.Map<AlunoDTO, Aluno>(dto);
                 aluno.Id = id.Value;
 
                 _repositorioAlunos.Atualizar(aluno);
