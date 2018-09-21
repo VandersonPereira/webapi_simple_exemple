@@ -1,4 +1,5 @@
-﻿using Estudo.MinhaApi.Api.Formatters;
+﻿using Estudo.MinhaApi.Api.Filters;
+using Estudo.MinhaApi.Api.Formatters;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,9 @@ namespace Estudo.MinhaApi.Api
 
             // Adicionando o formato CSV
             config.Formatters.Add(new CsvMediaTypeFormatter());
+
+            // Adicionando o filtro HATEOAS globalmente
+            config.Filters.Add(new FillResonseWithHATEOASAttribute());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

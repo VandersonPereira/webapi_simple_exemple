@@ -14,6 +14,7 @@ using System.Web.Http;
 
 namespace Estudo.MinhaApi.Api.Controllers
 {
+    [RoutePrefix("api/alunos")]
     public class AlunosController : ApiController
     {
         private IRepositorioEstudo<Aluno, int> _repositorioAlunos = new RepositorioAlunos(new MinhaApiDbContext());
@@ -38,7 +39,15 @@ namespace Estudo.MinhaApi.Api.Controllers
                 return NotFound();
 
             AlunoDTO dto = AutoMapperManager.Instance.Mapper.Map<Aluno, AlunoDTO>(aluno);
-            return Content(HttpStatusCode.Found, dto);
+            return Content(HttpStatusCode.OK, dto);
+        }
+
+        [Route("por-nome/{nomeAluno}")]
+        public IHttpActionResult Get(string nomeAluno)
+        {
+            List<Aluno> alunos = _repositorioAlunos.Selecionar(s => s.Nome.ToLower().Contains(nomeAluno.ToLower()));
+            List<AlunoDTO> dtos = AutoMapper.AutoMapperManager.Instance.Mapper.Map<List<Aluno>, List<AlunoDTO>>(alunos);
+            return Ok(dtos);
         }
 
         [ApplyModelValidation]
