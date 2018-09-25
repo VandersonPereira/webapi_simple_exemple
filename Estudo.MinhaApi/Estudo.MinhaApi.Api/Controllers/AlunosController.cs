@@ -14,6 +14,7 @@ using System.Web.Http;
 
 namespace Estudo.MinhaApi.Api.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/alunos")]
     public class AlunosController : ApiController
     {

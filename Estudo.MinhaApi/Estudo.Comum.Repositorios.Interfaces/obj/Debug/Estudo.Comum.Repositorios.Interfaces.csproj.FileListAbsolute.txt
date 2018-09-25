@@ -10,3 +10,9 @@ C:\Users\vanderson.pereira\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Es
 C:\Users\vanderson.pereira\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\vanderson.pereira\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.dll
 C:\Users\vanderson.pereira\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.pdb
+C:\Users\vando\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\bin\Debug\Estudo.Comum.Repositorios.Interfaces.dll
+C:\Users\vando\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\bin\Debug\Estudo.Comum.Repositorios.Interfaces.pdb
+C:\Users\vando\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.csprojAssemblyReference.cache
+C:\Users\vando\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\vando\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.dll
+C:\Users\vando\source\repos\webapi_simple_exemple\Estudo.MinhaApi\Estudo.Comum.Repositorios.Interfaces\obj\Debug\Estudo.Comum.Repositorios.Interfaces.pdb
